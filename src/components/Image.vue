@@ -1,6 +1,6 @@
 <template>
     <figure class="pb-10">
-        <img class="w-full" :src="source" />
+        <img class="w-full" :src="source" loading="lazy" />
     </figure>
 </template>
 

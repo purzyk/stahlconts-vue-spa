@@ -2,20 +2,12 @@
   <header class="font-IBM" v-if="options" ref="top">
     <SiteHeader :options="options" />
   </header>
-  <div v-else>
-    <Loading />
-  </div>
   <main class="font-IBM">
     <router-view />
   </main>
-
   <footer class="font-IBM" v-if="options">
     <SiteFooter :options="options" />
   </footer>
-  <div v-else>
-    <Loading />
-  </div>
-
 </template>
 <script>
 import SiteHeader from "./components/Header.vue";
