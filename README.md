@@ -1,8 +1,9 @@
-# VUE.JS SPA for stahlconst company
+# VUE.JS headless wordpress site for stahlconst company
 
-https://stahlconst-vue-spa.netlify.app/
+wordpress-vue-headless
 build with Vue.js and Tailwind CSS
 Data fetched from Wordpress Rest API
+form validate with vee-validate
 
 ## Project setup
 
