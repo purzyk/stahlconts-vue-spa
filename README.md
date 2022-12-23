@@ -1,5 +1,7 @@
 # VUE.JS headless wordpress site for stahlconst company
 
+https://wordpress-vue-headless.netlify.app/
+
 wordpress-vue-headless
 build with Vue.js and Tailwind CSS
 Data fetched from Wordpress Rest API
