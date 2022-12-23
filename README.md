@@ -1,4 +1,4 @@
-# VUE.JS headless wordpress site for stahlconst company
+# VUE.js + tailwind headless wordpress site
 
 https://wordpress-vue-headless.netlify.app/
 
