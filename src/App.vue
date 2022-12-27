@@ -30,7 +30,7 @@ export default {
     }
   },
   mounted() {
-    fetch('https://stahlconst.purzycki.pl/wp-json/acf/v3/options/options')
+    fetch('https://stahlconst.purzycki.pl/en/wp-json/acf/v3/options/options')
       .then(res => res.json())
       .then(data => this.options = data)
       .catch(err => console.log(err.message))

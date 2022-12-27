@@ -2,33 +2,33 @@
     <Form @submit="onSubmit" :validation-schema="schema" v-slot="{ errors }">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="col-span-1 mb-3">
-                <Field name="name" placeholder="Imię i nazwisko" type="text" class="form-control"
+                <Field name="name" placeholder="Full name" type="text" class="form-control"
                     :class="{ 'is-invalid': errors.name }" />
-                <label>Imię i nazwisko</label>
+                <label>Full name</label>
                 <div class="invalid-feedback">{{ errors.name }}</div>
             </div>
             <div class="col-span-1 mb-3">
-                <Field placeholder="Organizacja" name="organizacja" type="text" class="form-control"
+                <Field placeholder="Company" name="organizacja" type="text" class="form-control"
                     :class="{ 'is-invalid': errors.organizacja }" />
-                <label>Organizacja</label>
+                <label>Company</label>
                 <div class="invalid-feedback">{{ errors.organizacja }}</div>
             </div>
             <div class="col-span-1 mb-3">
-                <Field placeholder="Email" name="email" type="text" class="form-control"
+                <Field placeholder="E-mail" name="email" type="text" class="form-control"
                     :class="{ 'is-invalid': errors.email }" />
                 <label>E-mail</label>
                 <div class="invalid-feedback">{{ errors.email }}</div>
             </div>
             <div class="col-span-1 mb-3">
-                <Field placeholder="Telefon" name="telefon" type="text" class="form-control"
+                <Field placeholder="Phone number" name="telefon" type="text" class="form-control"
                     :class="{ 'is-invalid': errors.telefon }" />
-                <label>Telefon</label>
+                <label>Phone number</label>
                 <div class="invalid-feedback">{{ errors.telefon }}</div>
             </div>
             <div class="md:col-span-2 mb-3">
-                <Field placeholder="Wiadomość" name="wiadomosc" as="textarea" class="form-control"
+                <Field placeholder="Message" name="wiadomosc" as="textarea" class="form-control"
                     :class="{ 'is-invalid': errors.wiadomosc }" />
-                <label>Wiadomość</label>
+                <label>Message</label>
                 <div class="invalid-feedback">{{ errors.wiadomosc }}</div>
             </div>
             <div class="md:col-span-2 mb-3">
@@ -37,14 +37,14 @@
                         <label class="inline-flex items-center">
                             <Field name="acceptTerms" type="checkbox" id="acceptTerms" value="true" checked
                                 class="form-check-input" :class="{ 'is-invalid': errors.acceptTerms }" />
-                            <span for="acceptTerms" class="ml-2">Akceptuję politykę prywatności</span>
+                            <span for="acceptTerms" class="ml-2">I accept the privacy policy</span>
                         </label>
                         <div class="invalid-feedback">{{ errors.acceptTerms }}</div>
                     </div>
                 </div>
             </div>
             <div class="md:col-span-2 mb-3 text-right">
-                <button type="submit" class="btn btn-primary mr-1">Wyślij</button>
+                <button type="submit" class="btn btn-primary mr-1">Send</button>
             </div>
         </div>
     </Form>
@@ -63,22 +63,22 @@ export default {
         const schema = Yup.object().shape({
 
             name: Yup.string()
-                .required('Podaj imię i nazwisko.'),
+                .required('Please add full name.'),
             organizacja: Yup.string()
-                .required('Podaj nazwę organizacji.'),
+                .required('Please add company name.'),
 
             email: Yup.string()
-                .required('Adres E-mail jest wymagany.')
-                .email('Podaj poprawny adres E-mail'),
+                .required('Email is required.')
+                .email('Please add correct address email'),
 
             telefon: Yup.string()
-                .required('Podaj telefon.'),
+                .required('Please add phone number.'),
 
             wiadomosc: Yup.string()
-                .required('Wpisz wiadomość.'),
+                .required('Please add the message.'),
 
             acceptTerms: Yup.string()
-                .required('Zgoda jest obowiązkowa')
+                .required('This checkbox is required')
         });
 
         return {

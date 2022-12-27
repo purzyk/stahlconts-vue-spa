@@ -59,7 +59,7 @@ export default {
         }
     },
     mounted() {
-        fetch('https://stahlconst.purzycki.pl/wp-json/wp/v2/realizacje/' + this.id)
+        fetch('https://stahlconst.purzycki.pl/en/wp-json/wp/v2/realizacje/' + this.id)
             .then(res => res.json())
             .then(data => this.realizacja = data)
             .catch(err => console.log(err.message))

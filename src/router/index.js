@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import Oferty from '../views/Oferty/Oferty.vue'
-import Realizacje from '../views/Realizacje/Realizacje.vue'
-import OfertyDetails from '../views/Oferty/OfertyDetails.vue'
-import RealizacjeDetails from '../views/Realizacje/RealizacjeDetails.vue'
+import Offers from '../views/Offers/Offers.vue'
+import Works from '../views/Works/Works.vue'
+import OffersDetails from '../views/Offers/OffersDetails.vue'
+import WorksDetails from '../views/Works/WorksDetails.vue'
 import Page404 from '../views/Page404.vue'
-import Onas from '../views/Onas.vue'
+import AboutUs from '../views/AboutUs.vue'
 
 
 
@@ -16,30 +16,30 @@ const routes = [
     component: Home
   },
   {
-    path: '/oferty',
-    name: 'Oferty',
-    component: Oferty
+    path: '/offers',
+    name: 'Offers',
+    component: Offers
   },
   {
-    path: '/onas',
-    name: 'Onas',
-    component: Onas
+    path: '/AboutUs',
+    name: 'AboutUs',
+    component: AboutUs
   },
   {
-    path: '/oferty/:id',
-    name: 'OfertyDetails',
-    component: OfertyDetails,
+    path: '/offers/:id',
+    name: 'OffersDetails',
+    component: OffersDetails,
     props: true
   },
   {
-    path: '/realizacje',
-    name: 'Realizacje',
-    component: Realizacje
+    path: '/works',
+    name: 'Works',
+    component: Works
   },
   {
-    path: '/realizacje/:id',
-    name: 'RealizacjeDetails',
-    component: RealizacjeDetails,
+    path: '/works/:id',
+    name: 'WorksDetails',
+    component: WorksDetails,
     props: true
   },
   {

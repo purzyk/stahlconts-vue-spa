@@ -12,7 +12,7 @@
     <section>
       <div class="w-full py-10 text-3xl  bg-secondary-300 pt-p6 pb-p6">
         <div class="px-p8">
-          <BlockTitle title="Oferta" />
+          <BlockTitle title="Offer" />
           <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             <div class="col-span-1" v-for="oferta in data.acf.lista_ofert" :key="oferta">
               <GridContent :icon="oferta.ikona.url" :copy="oferta.tytul" />
@@ -24,7 +24,7 @@
     <section>
       <div class="w-full py-10 text-3xl pt-p6 pb-p6">
         <div class="px-p8">
-          <BlockTitle title="Nasze atuty" />
+          <BlockTitle title="Our values" />
           <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
             <div class="col-span-1" v-for="atut in data.acf.wartosci" :key="atut">
               <GridContent :number="atut.liczba" :copy="atut.opis" />
@@ -54,12 +54,12 @@ export default {
   name: 'Home',
   data() {
     return {
-      pageId: 23,
+      pageId: 486,
       data: null
     }
   },
   mounted() {
-    fetch('https://stahlconst.purzycki.pl/wp-json/wp/v2/pages/' + this.pageId)
+    fetch('https://stahlconst.purzycki.pl/en/wp-json/wp/v2/pages/' + this.pageId)
       .then(res => res.json())
       .then(data => this.data = data)
       .catch(err => console.log(err.message))

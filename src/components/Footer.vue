@@ -2,10 +2,10 @@
     <section id="contact">
         <div class="w-full py-10 text-3xl  pt-p6 pb-p6  bg-secondary-400 ">
             <div class="px-p8">
-                <BlockTitle title="Skontaktuj się z nami" />
+                <BlockTitle title="Contact with us" />
                 <div class="pt-10">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <div class="col-span-1" v-html="options.acf.skontaktuj_sie_z_nami_copy"></div>
+                        <div class="col-span-1">Contact form</div>
                         <div class="col-span-1">
                             <ContactForm />
                         </div>
@@ -19,7 +19,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-9">
                 <div class="col-span-1 lg:col-span-12 footer__scrollUp flex justify-between items-center mb-p2">
                     <div></div>
-                    <a class="text-lg" v-on:click="scrollTo('top')">Przewin do góry</a>
+                    <a class="text-lg" v-on:click="scrollTo('top')">Scroll up</a>
                 </div>
                 <div class="col-span-1 lg:col-span-2">
                     <p class="text-xl" v-html="options.acf.slogan"></p>

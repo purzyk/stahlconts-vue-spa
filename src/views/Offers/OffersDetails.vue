@@ -33,7 +33,7 @@ export default {
         }
     },
     mounted() {
-        fetch('https://stahlconst.purzycki.pl/wp-json/wp/v2/oferty/' + this.id)
+        fetch('https://stahlconst.purzycki.pl/en/wp-json/wp/v2/oferty/' + this.id)
             .then(res => res.json())
             .then(data => this.oferta = data)
             .catch(err => console.log(err.message))

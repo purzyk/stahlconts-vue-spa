@@ -23,7 +23,7 @@
     </section>
     <section>
       <div class="w-full px-p8 py-10 pt-p6 pb-p6">
-        <BlockTitle title="Zespół" />
+        <BlockTitle title="Our team" />
         <div class="pt-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div v-for="person in data.acf.osoby_ze_zdjeciami" :key="person">
             <Person :img="person.zdjecie" :name="person.imie_i_nazwisko" :position="person.stanowisko"
@@ -60,12 +60,12 @@ export default {
   name: 'Home',
   data() {
     return {
-      pageId: 62,
+      pageId: 484,
       data: null
     }
   },
   mounted() {
-    fetch('https://stahlconst.purzycki.pl/wp-json/wp/v2/pages/' + this.pageId)
+    fetch('https://stahlconst.purzycki.pl/en/wp-json/wp/v2/pages/' + this.pageId)
       .then(res => res.json())
       .then(data => this.data = data)
       .catch(err => console.log(err.message))
