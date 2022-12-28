@@ -54,12 +54,13 @@ export default {
   name: 'Home',
   data() {
     return {
+      apiUrl: process.env.VUE_APP_ROOT_API,
       pageId: 486,
       data: null
     }
   },
   mounted() {
-    fetch('https://stahlconst.purzycki.pl/en/wp-json/wp/v2/pages/' + this.pageId)
+    fetch(this.apiUrl + '/pages/' + this.pageId)
       .then(res => res.json())
       .then(data => this.data = data)
       .catch(err => console.log(err.message))

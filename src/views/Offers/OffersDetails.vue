@@ -29,11 +29,12 @@ export default {
     props: ['id'],
     data() {
         return {
+            apiUrl: process.env.VUE_APP_ROOT_API,
             oferta: null
         }
     },
     mounted() {
-        fetch('https://stahlconst.purzycki.pl/en/wp-json/wp/v2/oferty/' + this.id)
+        fetch(this.apiUrl + '/oferty/' + this.id)
             .then(res => res.json())
             .then(data => this.oferta = data)
             .catch(err => console.log(err.message))

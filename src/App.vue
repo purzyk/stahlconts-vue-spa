@@ -19,6 +19,7 @@ export default {
   },
   data() {
     return {
+      apiUrl: process.env.VUE_APP_OPTIONS_API,
       options: null
     }
   },
@@ -30,7 +31,7 @@ export default {
     }
   },
   mounted() {
-    fetch('https://stahlconst.purzycki.pl/en/wp-json/acf/v3/options/options')
+    fetch(this.apiUrl)
       .then(res => res.json())
       .then(data => this.options = data)
       .catch(err => console.log(err.message))

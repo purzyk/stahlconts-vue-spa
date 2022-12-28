@@ -57,17 +57,18 @@ export default {
     data() {
         return {
             pageId: 475,
+            apiUrl: process.env.VUE_APP_ROOT_API,
             data: null,
-            oferty: []
+            oferty: [],
         }
     },
     mounted() {
-        fetch('https://stahlconst.purzycki.pl/en/wp-json/wp/v2/pages/' + this.pageId)
+        fetch(this.apiUrl + '/pages/' + this.pageId)
             .then(res => res.json())
             .then(data => this.data = data)
             .catch(err => console.log(err.message))
 
-        fetch('https://stahlconst.purzycki.pl/en/wp-json/wp/v2/oferty')
+        fetch(this.apiUrl + '/oferty')
             .then(res => res.json())
             .then(data => this.oferty = data)
             .catch(err => console.log(err.message))

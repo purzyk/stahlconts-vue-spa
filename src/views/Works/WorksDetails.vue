@@ -55,11 +55,12 @@ export default {
     props: ['id'],
     data() {
         return {
+            apiUrl: process.env.VUE_APP_ROOT_API,
             realizacja: null
         }
     },
     mounted() {
-        fetch('https://stahlconst.purzycki.pl/en/wp-json/wp/v2/realizacje/' + this.id)
+        fetch(this.apiUrl + '/realizacje/' + this.id)
             .then(res => res.json())
             .then(data => this.realizacja = data)
             .catch(err => console.log(err.message))

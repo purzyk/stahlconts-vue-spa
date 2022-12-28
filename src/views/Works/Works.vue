@@ -37,11 +37,12 @@ export default {
     },
     data() {
         return {
+            apiUrl: process.env.VUE_APP_ROOT_API,
             realizacje: []
         }
     },
     mounted() {
-        fetch('https://stahlconst.purzycki.pl/en/wp-json/wp/v2/realizacje?_embed=wp:term')
+        fetch(this.apiUrl + '/realizacje?_embed=wp:term')
             .then(res => res.json())
             .then(data => this.realizacje = data)
             .catch(err => console.log(err.message))
