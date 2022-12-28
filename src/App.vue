@@ -19,7 +19,7 @@ export default {
   },
   data() {
     return {
-      apiUrl: process.env.VUE_APP_OPTIONS_API,
+      apiOptionsUrl: process.env.VUE_APP_OPTIONS_API,
       options: null
     }
   },
@@ -31,10 +31,14 @@ export default {
     }
   },
   mounted() {
-    fetch(this.apiUrl)
+    console.log('1' + this.apiOptionsUrl);
+    console.log('2' + process.env.VUE_APP_OPTIONS_API);
+    fetch(this.apiOptionsUrl)
       .then(res => res.json())
       .then(data => this.options = data)
       .catch(err => console.log(err.message))
+
+
   }
 }
 </script>
