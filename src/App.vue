@@ -31,8 +31,6 @@ export default {
     }
   },
   mounted() {
-    console.log('1' + this.apiOptionsUrl);
-    console.log('2' + process.env.VUE_APP_OPTIONS_API);
     fetch(this.apiOptionsUrl)
       .then(res => res.json())
       .then(data => this.options = data)
