@@ -19,11 +19,15 @@
             </div>
             <div :class="this.showMobileMenu ? 'block' : 'hidden'" class="lg:flex justify-end w-full">
                 <nav class="w-full flex flex-col lg:flex-row lg:justify-center text-2xl lg:text-base text-center">
-                    <router-link class="nav-link" to="/"><span>home</span></router-link>
-                    <router-link class="nav-link" :to="{ name: 'Offers' }"><span>offers</span></router-link>
-                    <router-link class="nav-link" :to="{ name: 'Works' }"><span>works</span></router-link>
-                    <router-link class="nav-link" :to="{ name: 'AboutUs' }"><span>about us</span></router-link>
-                    <button class="nav-link" v-on:click="scrollTo('contact')">
+                    <router-link v-on:click="this.showMobileMenu = false" class="nav-link"
+                        to="/"><span>home</span></router-link>
+                    <router-link v-on:click="this.showMobileMenu = false" class="nav-link"
+                        :to="{ name: 'Offers' }"><span>offers</span></router-link>
+                    <router-link v-on:click="this.showMobileMenu = false" class="nav-link"
+                        :to="{ name: 'Works' }"><span>works</span></router-link>
+                    <router-link v-on:click="this.showMobileMenu = false" class="nav-link"
+                        :to="{ name: 'AboutUs' }"><span>about us</span></router-link>
+                    <button class="nav-link" v-on:click="scrollTo('contact'); this.showMobileMenu = false">
                         contact
                     </button>
                 </nav>
